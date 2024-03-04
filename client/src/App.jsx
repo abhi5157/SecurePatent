@@ -4,6 +4,7 @@ import { ethers } from 'ethers'
 import { AiOutlineCopy } from 'react-icons/ai'
 import { IoOpenOutline } from 'react-icons/io5'
 
+
 import axios from 'axios'
 import FormData from 'form-data'
 
@@ -242,6 +243,8 @@ function App() {
         console.log('signature is', signerAddress)
         document.querySelector('#valid').innerHTML = `<h1>${signerAddress}</h1>`
     }
+
+   
 
     return (
         <div className='bg-[#E4E4D0] min-h-screen max-h-full'>
@@ -555,10 +558,10 @@ function App() {
                                                     <AiOutlineCopy />
                                                 </div>
                                             </div>
-                                            <div className='flex items-center gap-2'>
+                                            <div className='flex items-center gap-2'  >
                                                 <div>cid: {tx.cid}</div>
                                                 <a
-                                                    href={`ipfs://${tx.cid}/`}
+                                                    href={`https://ipfs.io/ipfs/${tx.cid}`}
                                                     target='_blank'
                                                     rel='noopener noreferrer'
                                                 >
@@ -608,7 +611,7 @@ function App() {
                                             <div className='flex items-center gap-2'>
                                                 <div>cid: {tx.cid}</div>
                                                 <a
-                                                    href={`ipfs://${tx.cid}/`}
+                                                    href={`https://ipfs.io/ipfs/${tx.cid}`}
                                                     target='_blank'
                                                     rel='noopener noreferrer'
                                                 >
